@@ -1,0 +1,46 @@
+Circuit: * C:\users\magyar-gabor-balazs\Documents\akkutolto.asc
+
+Limiting fall time of source v2 to 10
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+vernier = 0.5
+vernier = 0.666667
+Gmin = 4.65514e-005
+vernier = 0.888888
+Gmin = 7.53781e-006
+vernier = 1
+Gmin = 8.09366e-007
+Gmin = 8.6905e-008
+Gmin = 9.33136e-009
+Gmin = 1.00195e-009
+Gmin = 1.07583e-010
+Gmin = 1.15517e-011
+Gmin = 1.24035e-012
+Gmin = 1.33182e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Sat Oct 11 00:35:53 2025
+Total elapsed time: 0.824 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 80800
+traniter = 80122
+tranpoints = 40048
+accept = 40036
+rejected = 12
+matrix size = 22
+fillins = 13
+solver = Normal
+Matrix Compiler1: 2.85 KB object code size  0.6/0.2/[0.2]
+Matrix Compiler2: off  [0.2]/0.3/0.3
+
