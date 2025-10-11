@@ -228,7 +228,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:C_Polarized"
+		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
 			)
@@ -247,7 +247,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "C_Polarized"
+			(property "Value" "C"
 				(at 0.635 -2.54 0)
 				(effects
 					(font
@@ -274,7 +274,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Polarized capacitor"
+			(property "Description" "Unpolarized capacitor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -292,7 +292,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "CP_*"
+			(property "ki_fp_filters" "C_*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -301,12 +301,13 @@
 					(hide yes)
 				)
 			)
-			(symbol "C_Polarized_0_1"
-				(rectangle
-					(start -2.286 0.508)
-					(end 2.286 1.016)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
 					(stroke
-						(width 0)
+						(width 0.508)
 						(type default)
 					)
 					(fill
@@ -315,41 +316,18 @@
 				)
 				(polyline
 					(pts
-						(xy -1.778 2.286) (xy -0.762 2.286)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
-						(width 0)
+						(width 0.508)
 						(type default)
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.794) (xy -1.27 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 2.286 -0.508)
-					(end -2.286 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 			)
-			(symbol "C_Polarized_1_1"
+			(symbol "C_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 2.794)
@@ -389,7 +367,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D_Zener"
+		(symbol "Device:D"
 			(pin_numbers
 				(hide yes)
 			)
@@ -408,7 +386,7 @@
 					)
 				)
 			)
-			(property "Value" "D_Zener"
+			(property "Value" "D"
 				(at 0 -2.54 0)
 				(effects
 					(font
@@ -434,7 +412,25 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Zener diode"
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
 				(at 0 0 0)
 				(effects
 					(font
@@ -461,10 +457,22 @@
 					(hide yes)
 				)
 			)
-			(symbol "D_Zener_0_1"
+			(symbol "D_0_1"
 				(polyline
 					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -486,20 +494,8 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 			)
-			(symbol "D_Zener_1_1"
+			(symbol "D_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 2.54)
@@ -522,353 +518,6 @@
 					(at 3.81 0 180)
 					(length 2.54)
 					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:LED"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LED"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Light emitting diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "LED diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LED_0_1"
-				(polyline
-					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LED_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:R_Potentiometer_Trim"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "RV2"
-				(at -6.35 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "470"
-				(at -3.81 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Trim-potentiometer"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "resistor variable trimpot trimmer"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Potentiometer*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_Potentiometer_Trim_0_1"
-				(rectangle
-					(start 1.016 2.54)
-					(end -1.016 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 0.762) (xy 1.524 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.524 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_Potentiometer_Trim_1_1"
-				(pin no_connect line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 1.27)
-					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1050,50 +699,33 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:LM7805_TO220"
+		(symbol "R_Potentiometer_Trim_2"
 			(pin_names
-				(offset 0.254)
+				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at -3.81 3.175 0)
+			(property "Reference" "RV2"
+				(at -2.54 -1.2701 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify right)
 				)
 			)
-			(property "Value" "LM7805_TO220"
-				(at 0 3.175 0)
+			(property "Value" "100"
+				(at -2.54 1.2699 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
-				(at 0 5.715 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF"
-				(at 0 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"
+			(property "Footprint" "Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1102,7 +734,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Voltage Regulator 1A Positive"
+			(property "Datasheet" "~"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1111,7 +743,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?220*"
+			(property "Description" "Trim-potentiometer"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1120,24 +752,66 @@
 					(hide yes)
 				)
 			)
-			(symbol "LM7805_TO220_0_1"
+			(property "ki_keywords" "resistor variable trimpot trimmer"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Potentiometer*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Potentiometer_Trim_2_0_1"
 				(rectangle
-					(start -5.08 1.905)
-					(end 5.08 -5.08)
+					(start 1.016 2.54)
+					(end -1.016 -2.54)
 					(stroke
 						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 0.762) (xy 1.524 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
-			(symbol "LM7805_TO220_1_1"
-				(pin power_in line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "VI"
+			(symbol "R_Potentiometer_Trim_2_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1152,10 +826,28 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1163,6 +855,129 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Regulator_Linear:LM317L_SOT-89"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -3.81 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LM317L_SOT-89"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm317l.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "100mA 35V Adjustable Linear Regulator, SOT-89"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Adjustable Voltage Regulator 1A Positive"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?89*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LM317L_SOT-89_0_1"
+				(rectangle
+					(start -5.08 1.905)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "LM317L_SOT-89_1_1"
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "VI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "ADJ"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1180,7 +995,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1396,10 +1211,28 @@
 		)
 	)
 	(junction
+		(at 81.28 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0e4c005d-d15e-4419-abde-140bf389874e")
+	)
+	(junction
 		(at 168.91 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1106b2a6-5280-424a-ae35-65c5dcfdd8f9")
+	)
+	(junction
+		(at 158.75 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1a5420bc-c013-4e18-b5f2-8b4dfe8c0851")
+	)
+	(junction
+		(at 92.71 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "206c8880-875f-45ce-a955-bf8dea797978")
 	)
 	(junction
 		(at 118.11 58.42)
@@ -1408,16 +1241,28 @@
 		(uuid "22f97382-3eea-48aa-9448-cf9af08a3425")
 	)
 	(junction
-		(at 144.78 85.09)
+		(at 158.75 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "286d02aa-1726-499f-b7b1-f59d021f9741")
+		(uuid "2aabe22f-70b8-4c64-b66d-d8a5bfdea952")
+	)
+	(junction
+		(at 151.13 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "32cb7ad9-deb4-4e4a-8a7b-79364a0c6388")
 	)
 	(junction
 		(at 118.11 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4b02c0a4-2ee6-4e13-8a13-0f1be46d4121")
+	)
+	(junction
+		(at 158.75 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9da583d9-cecc-42b1-9e4a-ab7495f042f5")
 	)
 	(junction
 		(at 92.71 58.42)
@@ -1432,10 +1277,16 @@
 		(uuid "c1eaec8e-e232-4cf7-a14f-cb84edee3430")
 	)
 	(junction
-		(at 92.71 39.37)
+		(at 151.13 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "fc1f2558-e38e-4fd7-aeea-1c78df668f53")
+		(uuid "d883cc7e-8297-4c9f-a0eb-0ac10ca8e6dd")
+	)
+	(junction
+		(at 144.78 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e3174b69-3998-45b2-9d55-ebf79ffa559c")
 	)
 	(wire
 		(pts
@@ -1459,6 +1310,36 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 49.53) (xy 158.75 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b25a858-389e-41de-9c87-b2c7de2781b7")
+	)
+	(wire
+		(pts
+			(xy 151.13 62.23) (xy 151.13 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c664ca6-9391-4122-8a1e-2ec760ed2e1f")
+	)
+	(wire
+		(pts
+			(xy 144.78 58.42) (xy 144.78 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d358b25-2758-4b4b-b401-4c1ff64a06c0")
+	)
+	(wire
+		(pts
 			(xy 118.11 43.18) (xy 118.11 49.53)
 		)
 		(stroke
@@ -1469,13 +1350,23 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 81.28) (xy 140.97 72.39)
+			(xy 151.13 49.53) (xy 151.13 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2b0fa754-f8a3-4e48-8885-4bd578f1e5d4")
+		(uuid "21eef08c-07b4-4269-95bc-db9ddb0f0ac6")
+	)
+	(wire
+		(pts
+			(xy 154.94 60.96) (xy 158.75 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2be51d6b-a15e-456a-8329-e5f44d583dfd")
 	)
 	(wire
 		(pts
@@ -1499,6 +1390,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 71.12) (xy 158.75 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32077973-c24c-44c1-a80f-f5e5c46fbc9c")
+	)
+	(wire
+		(pts
 			(xy 168.91 49.53) (xy 168.91 50.8)
 		)
 		(stroke
@@ -1509,7 +1410,37 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 85.09) (xy 118.11 85.09)
+			(xy 140.97 58.42) (xy 140.97 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a7904fb-ee9b-4a1a-8d98-2ea520c60a82")
+	)
+	(wire
+		(pts
+			(xy 140.97 58.42) (xy 144.78 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "401d8b75-c9c3-4683-b6f1-a629c452d7f4")
+	)
+	(wire
+		(pts
+			(xy 151.13 49.53) (xy 158.75 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c2c36e5-e18e-4c48-b44b-abdc6c5d66ec")
+	)
+	(wire
+		(pts
+			(xy 118.11 85.09) (xy 151.13 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1559,6 +1490,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 85.09) (xy 168.91 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "825d053f-8689-433d-82e5-972bf4ebc82e")
+	)
+	(wire
+		(pts
 			(xy 100.33 49.53) (xy 100.33 46.99)
 		)
 		(stroke
@@ -1576,6 +1517,26 @@
 			(type default)
 		)
 		(uuid "860935f7-65b1-47c3-9ae8-c3cb8fd23b03")
+	)
+	(wire
+		(pts
+			(xy 151.13 85.09) (xy 158.75 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91e77c48-7928-4a91-95ac-c7523a6a6c47")
+	)
+	(wire
+		(pts
+			(xy 144.78 66.04) (xy 154.94 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4c7073d-4654-4941-94dc-e40ef51af04d")
 	)
 	(wire
 		(pts
@@ -1599,7 +1560,17 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 49.53) (xy 168.91 49.53)
+			(xy 158.75 60.96) (xy 158.75 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b61e0fcd-d22d-4585-983d-09a044b2cd0c")
+	)
+	(wire
+		(pts
+			(xy 148.59 49.53) (xy 151.13 49.53)
 		)
 		(stroke
 			(width 0)
@@ -1609,13 +1580,23 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 85.09) (xy 168.91 85.09)
+			(xy 81.28 30.48) (xy 81.28 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c32a93aa-8193-4efc-a557-915acd0fdab5")
+		(uuid "b7badf36-7504-491f-8198-5a21b9fc850c")
+	)
+	(wire
+		(pts
+			(xy 154.94 66.04) (xy 154.94 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c243c6c0-9f55-4622-a72a-3ea38ad848b3")
 	)
 	(wire
 		(pts
@@ -1626,6 +1607,16 @@
 			(type default)
 		)
 		(uuid "c706ffd4-8f56-4ecc-b813-d4f14c4cfcef")
+	)
+	(wire
+		(pts
+			(xy 158.75 30.48) (xy 138.43 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7c916fa-7324-4c0d-8b5f-edfb36d570e2")
 	)
 	(wire
 		(pts
@@ -1659,6 +1650,26 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 30.48) (xy 81.28 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de223698-34c2-419e-930a-7d334ce622b4")
+	)
+	(wire
+		(pts
+			(xy 144.78 58.42) (xy 147.32 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2219679-526e-4f66-ba45-8d7d49eae6be")
+	)
+	(wire
+		(pts
 			(xy 118.11 85.09) (xy 118.11 58.42)
 		)
 		(stroke
@@ -1666,6 +1677,26 @@
 			(type default)
 		)
 		(uuid "ee55ed6b-6ebc-4943-a1e6-5f9ca4b19035")
+	)
+	(wire
+		(pts
+			(xy 158.75 60.96) (xy 158.75 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0b357ad-254c-4950-b8e0-1c66f1a42f6f")
+	)
+	(wire
+		(pts
+			(xy 158.75 49.53) (xy 168.91 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f974a160-b9a5-4752-b554-0845c64886ea")
 	)
 	(wire
 		(pts
@@ -1718,7 +1749,81 @@
 		(uuid "ddd81af7-2f21-4921-89d7-66beb189da6b")
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_name "R_Potentiometer_Trim_2")
+		(lib_id "Device:R_Potentiometer_Trim")
+		(at 151.13 58.42 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1588fc8d-0d37-44e7-ad4b-68f8fb99d201")
+		(property "Reference" "RV2"
+			(at 153.67 57.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 153.67 59.6899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical"
+			(at 151.13 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Trim-potentiometer"
+			(at 151.13 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "05e68d01-9294-4ff4-9bf6-991e301590cc")
+		)
+		(pin "1"
+			(uuid "1e4e5de7-3f4d-4663-972f-a0dd6db01fec")
+		)
+		(pin "2"
+			(uuid "8a3992fb-c52d-4907-afdf-0df49316ec1d")
+		)
+		(instances
+			(project "akkutolto"
+				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
+					(reference "RV2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
 		(at 92.71 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1726,9 +1831,9 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1a010b32-22bc-4b7f-89b0-6ab04c4cc5fa")
+		(uuid "20c59a07-4e3b-478f-95d4-8a82d084cf22")
 		(property "Reference" "C1"
-			(at 96.52 48.6409 0)
+			(at 96.52 49.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1736,8 +1841,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
-			(at 96.52 51.1809 0)
+		(property "Value" "1u"
+			(at 96.52 52.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1745,7 +1850,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 93.6752 54.61 0)
 			(effects
 				(font
@@ -1763,7 +1868,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Unpolarized capacitor"
 			(at 92.71 50.8 0)
 			(effects
 				(font
@@ -1773,13 +1878,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "31f3a81f-e68e-4cb7-8e01-8b0e040218d3")
+			(uuid "423f0a33-2c9a-4c23-b89d-942000f6fc30")
 		)
 		(pin "2"
-			(uuid "df710072-eed8-457c-a67b-a720f0512926")
+			(uuid "5e7c72ec-f858-41f9-b936-7a90f4831326")
 		)
 		(instances
-			(project ""
+			(project "akkutolto"
 				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
 					(reference "C1")
 					(unit 1)
@@ -1788,35 +1893,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 118.11 53.34 0)
+		(lib_id "Device:D")
+		(at 134.62 30.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "34575620-05c9-445f-b124-2c6997a05bf3")
-		(property "Reference" "C2"
-			(at 121.92 51.1809 0)
+		(uuid "2803fbf5-b3e9-4dd5-b850-98b87af5f983")
+		(property "Reference" "D1"
+			(at 134.62 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "10u"
-			(at 121.92 53.7209 0)
+		(property "Value" "D"
+			(at 134.62 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
-			(at 119.0752 57.15 0)
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
+			(at 134.62 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1825,7 +1928,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 118.11 53.34 0)
+			(at 134.62 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1833,8 +1936,96 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
-			(at 118.11 53.34 0)
+		(property "Description" "Diode"
+			(at 134.62 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 134.62 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 134.62 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "775444d4-ae28-4e1e-8e8b-8d7f86e12906")
+		)
+		(pin "1"
+			(uuid "c8baa8a0-f0e6-4a4d-8e8e-815d6a6a6e1f")
+		)
+		(instances
+			(project ""
+				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 158.75 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2bf89f34-9ed2-4328-9129-d544d92a867c")
+		(property "Reference" "C4"
+			(at 162.56 66.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 162.56 68.5799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 159.7152 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 158.75 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1843,15 +2034,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "31f3a81f-e68e-4cb7-8e01-8b0e040218d4")
+			(uuid "02030630-67aa-42e6-a455-c68533b533f8")
 		)
 		(pin "2"
-			(uuid "df710072-eed8-457c-a67b-a720f0512927")
+			(uuid "309d4e02-2a93-45e9-8063-ad8798d87d1c")
 		)
 		(instances
 			(project ""
 				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
-					(reference "C2")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -1885,7 +2076,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_AMASS:AMASS_XT60-M_1x02_P7.20mm_Vertical"
 			(at 185.42 53.086 90)
 			(effects
 				(font
@@ -1928,35 +2119,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 140.97 68.58 90)
+		(lib_id "Device:C")
+		(at 168.91 54.61 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "45486fa7-9251-4064-9cb8-52c48d870dd7")
-		(property "Reference" "D2"
-			(at 144.78 68.8974 90)
+		(uuid "48831fc9-78c9-4f53-9ffc-472a11e33e3f")
+		(property "Reference" "C3"
+			(at 172.72 53.3399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "LED"
-			(at 144.78 71.4374 90)
+		(property "Value" "1u"
+			(at 172.72 55.8799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 140.97 68.58 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 169.8752 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1965,7 +2156,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 140.97 68.58 0)
+			(at 168.91 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1973,69 +2164,68 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Light emitting diode"
-			(at 140.97 68.58 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 168.91 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 140.97 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "4a74b5a1-9285-428f-a2b2-a7dff4ea06a8")
 		)
 		(pin "1"
-			(uuid "ef2f4db0-700b-4a10-9174-62dff44b82db")
+			(uuid "febace5a-51f7-4204-aa73-d2f15b973178")
+		)
+		(pin "2"
+			(uuid "4ac907d0-930d-4993-bf9b-84cbcaf628b9")
 		)
 		(instances
-			(project ""
+			(project "akkutolto"
 				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
-					(reference "D2")
+					(reference "C3")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Zener")
-		(at 140.97 60.96 270)
+		(lib_id "Regulator_Linear:LM317L_SOT-89")
+		(at 100.33 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "7768f9d1-3eb1-44a0-aeae-014cfb50c7d3")
-		(property "Reference" "D1"
-			(at 143.51 59.6899 90)
+		(uuid "741bcbdc-d13d-4509-9acb-f65658e2301a")
+		(property "Reference" "U1"
+			(at 100.33 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "D_Zener"
-			(at 143.51 62.2299 90)
+		(property "Value" "LM317L_SOT-89"
+			(at 100.33 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal"
-			(at 140.97 60.96 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3"
+			(at 100.33 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm317l.pdf"
+			(at 100.33 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2043,8 +2233,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 140.97 60.96 0)
+		(property "Description" "100mA 35V Adjustable Linear Regulator, SOT-89"
+			(at 100.33 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2052,25 +2242,91 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode"
-			(at 140.97 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b818ca46-2d56-41ab-9c30-ea08a1373187")
+		(pin "3"
+			(uuid "f76098cb-6c0d-4daa-a985-c01e22e530f6")
 		)
 		(pin "1"
-			(uuid "15dd5f33-ecfd-478c-9612-720fcd135629")
+			(uuid "e76db068-765b-47a0-b571-28dc90af5ff9")
+		)
+		(pin "2"
+			(uuid "0cfe62d8-12ec-40f8-8944-911f26d0aba9")
 		)
 		(instances
 			(project ""
 				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
-					(reference "D1")
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Linear:LM317L_SOT-89")
+		(at 140.97 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7d5dd39f-99b7-4f0b-b956-d91b469f49f4")
+		(property "Reference" "U2"
+			(at 140.97 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM317L_SOT-89"
+			(at 140.97 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3"
+			(at 140.97 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm317l.pdf"
+			(at 140.97 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100mA 35V Adjustable Linear Regulator, SOT-89"
+			(at 140.97 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "f76098cb-6c0d-4daa-a985-c01e22e530f6")
+		)
+		(pin "1"
+			(uuid "e76db068-765b-47a0-b571-28dc90af5ff9")
+		)
+		(pin "2"
+			(uuid "0cfe62d8-12ec-40f8-8944-911f26d0aba9")
+		)
+		(instances
+			(project ""
+				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -2104,7 +2360,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002"
 			(at 81.28 50.8 0)
 			(effects
 				(font
@@ -2175,89 +2431,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:LM7805_TO220")
-		(at 140.97 49.53 0)
+		(lib_id "Device:C")
+		(at 118.11 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "96fb9494-86d2-4722-ad58-ec17f99b38b7")
-		(property "Reference" "U2"
-			(at 140.97 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LM7805_TO220"
-			(at 140.97 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220F-3_Horizontal_TabDown"
-			(at 140.97 43.815 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF"
-			(at 140.97 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"
-			(at 140.97 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "9faee2ed-aa3a-413b-91ca-bb8f01e27a31")
-		)
-		(pin "1"
-			(uuid "372ca581-926c-4c31-99a8-035f6e65bb72")
-		)
-		(pin "2"
-			(uuid "0d657628-2272-482d-92d5-f0fd7fad7348")
-		)
-		(instances
-			(project ""
-				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 168.91 54.61 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a3df461c-35b2-409e-9580-71675a3776cd")
-		(property "Reference" "C3"
-			(at 172.72 52.4509 0)
+		(uuid "9871bfc0-c5d6-41a8-a5ba-f0365a99ce2d")
+		(property "Reference" "C2"
+			(at 121.92 52.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2265,8 +2449,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
-			(at 172.72 54.9909 0)
+		(property "Value" "1u"
+			(at 121.92 54.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2274,8 +2458,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
-			(at 169.8752 58.42 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 119.0752 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2284,7 +2468,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 168.91 54.61 0)
+			(at 118.11 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2292,8 +2476,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
-			(at 168.91 54.61 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 118.11 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2302,129 +2486,50 @@
 			)
 		)
 		(pin "1"
-			(uuid "31f3a81f-e68e-4cb7-8e01-8b0e040218d5")
+			(uuid "65e62ee7-bdde-431f-b2a9-5ead8f7eee3f")
 		)
 		(pin "2"
-			(uuid "df710072-eed8-457c-a67b-a720f0512928")
-		)
-		(instances
-			(project ""
-				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Potentiometer_Trim")
-		(at 144.78 81.28 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dd9fcbba-b09e-4a8b-b82f-adac1a3f38b1")
-		(property "Reference" "RV2"
-			(at 144.78 74.93 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100"
-			(at 144.78 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical"
-			(at 144.78 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 144.78 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Trim-potentiometer"
-			(at 144.78 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "087a02b6-dbee-40b2-bbec-4a5d70d6bc0b")
-		)
-		(pin "1"
-			(uuid "b808b833-b2f8-4906-81ee-c32e8175c31a")
-		)
-		(pin "2"
-			(uuid "c3f92de0-d61d-46a3-9f08-08b82562f3d7")
+			(uuid "5aa1d88f-3f8d-40de-a9d0-471872f6c826")
 		)
 		(instances
 			(project "akkutolto"
 				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
-					(reference "RV2")
+					(reference "C2")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:LM7805_TO220")
-		(at 100.33 39.37 0)
+		(lib_id "Device:D")
+		(at 158.75 53.34 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ebaefdce-a2e6-4782-ac86-2a4c80d6dd24")
-		(property "Reference" "U1"
-			(at 100.33 33.02 0)
+		(uuid "ccccb24d-f018-4a98-8d7c-78bc8ed48e37")
+		(property "Reference" "D2"
+			(at 161.29 52.0699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "LM7805_TO220"
-			(at 100.33 35.56 0)
+		(property "Value" "D"
+			(at 161.29 54.6099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220F-3_Horizontal_TabDown"
-			(at 100.33 33.655 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF"
-			(at 100.33 40.64 0)
+		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
+			(at 158.75 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2432,8 +2537,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"
-			(at 100.33 39.37 0)
+		(property "Datasheet" "~"
+			(at 158.75 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2441,19 +2546,43 @@
 				(hide yes)
 			)
 		)
-		(pin "3"
-			(uuid "9faee2ed-aa3a-413b-91ca-bb8f01e27a32")
+		(property "Description" "Diode"
+			(at 158.75 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
-		(pin "1"
-			(uuid "372ca581-926c-4c31-99a8-035f6e65bb73")
+		(property "Sim.Device" "D"
+			(at 158.75 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 158.75 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "2"
-			(uuid "0d657628-2272-482d-92d5-f0fd7fad7349")
+			(uuid "775444d4-ae28-4e1e-8e8b-8d7f86e12906")
+		)
+		(pin "1"
+			(uuid "c8baa8a0-f0e6-4a4d-8e8e-815d6a6a6e1f")
 		)
 		(instances
 			(project ""
 				(path "/44956321-45b2-43d8-97f0-d3545a7f2f9b"
-					(reference "U1")
+					(reference "D2")
 					(unit 1)
 				)
 			)
