@@ -10,7 +10,7 @@ R2 bat_vol stab_vol 100
 XU1 stab_cu N001 in LT1086-5
 XU2 N002 stab_vol stab_cu LT1086-5
 D3 0 N003 MMBZ6V8ALY
-R3 P001 N003 100
+R3 P001 N003 80
 .model D D
 .lib C:\users\magyar-gabor-balazs\Documents\LTspiceXVII\lib\cmp\standard.dio
 .tran 0 40 0 1m
