@@ -1,0 +1,21 @@
+* Z:\home\magyar-gabor-balazs\KiCAD\akkutolto\LTSpice\akkutolto.asc
+R1 stab_cu N001 2
+C1 stab_cu 0 1µ
+C2 stab_vol 0 1µ
+C3 in 0 1µ
+V1 in 0 20
+V2 bat_vol 0 PULSE(0 14 0 30 0 100)
+R2 bat_vol stab_vol 10
+XU1 stab_cu N001 in LT317A
+XU2 N002 stab_vol stab_cu LT317A
+R3 stab_vol N002 0.9k
+R4 N002 0 9.1k
+C4 N002 0 1µ
+D1 stab_vol in 1N4148
+D2 N002 stab_vol 1N4148
+.model D D
+.lib C:\users\magyar-gabor-balazs\Documents\LTspiceXVII\lib\cmp\standard.dio
+.tran 0 40 0 1m
+.lib LTC.lib
+.backanno
+.end

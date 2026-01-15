@@ -1,0 +1,23 @@
+Circuit: * Z:\home\magyar-gabor-balazs\KiCAD\akkutolto\LTSpice\Draft2.asc
+
+WARNING: Node N004 is floating.
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Tue Nov 11 16:32:43 2025
+Total elapsed time: 8.710 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4322617
+traniter = 4322591
+tranpoints = 2034880
+accept = 2014380
+rejected = 20500
+matrix size = 17
+fillins = 8
+solver = Normal
+Matrix Compiler1:      86 opcodes  0.4/[0.2]/0.3
+Matrix Compiler2: off  [0.2]/0.3/0.2
+
